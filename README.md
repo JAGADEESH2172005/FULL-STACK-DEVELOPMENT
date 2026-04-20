@@ -9,6 +9,22 @@ This is a monorepo consisting of two main directories:
 - `/backend`: The server-side API application built using **Node.js, Express, and MongoDB**.
 - `/ticket-booking`: The client-side application built using **React, Vite, and React Router**.
 
+## System Architecture
+
+```mermaid
+graph TD;
+    Client[React Frontend / Vite] -->|HTTP REST API| Server(Node.js / Express Backend)
+    Server -->|Mongoose| Database[(MongoDB)]
+    
+    subgraph Frontend Features
+    Client
+    end
+    
+    subgraph Backend Services
+    Server
+    end
+```
+
 ## Technologies
 
 ### Frontend
@@ -21,6 +37,36 @@ This is a monorepo consisting of two main directories:
 - **MongoDB & Mongoose**: Database and ODM for persisting events, user profiles, and ticket bookings.
 - **CORS**: Cross-origin resource sharing enablement.
 - **dotenv**: Environment variable management.
+
+## Database Schema
+
+```mermaid
+erDiagram
+    USER {
+        ObjectId _id
+        String name
+        String email
+        String password
+    }
+    EVENT {
+        ObjectId _id
+        String title
+        Date date
+        String location
+        Number availableTickets
+        Number price
+    }
+    BOOKING {
+        ObjectId _id
+        ObjectId user_id
+        ObjectId event_id
+        Number tickets
+        Number totalPrice
+    }
+
+    USER ||--o{ BOOKING : places
+    EVENT ||--o{ BOOKING : includes
+```
 
 ## Features
 - **Event Catalog**: Browse a wide array of existing events and details.
