@@ -1,0 +1,111 @@
+.pfWrap {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 22px 18px 26px;
+}
+
+.pfMain {
+  margin-top: 14px;
+}
+
+.pfCard {
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.pfH2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+
+.pfBanner {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  font-size: 13px;
+}
+
+.pfOk {
+  border-color: color-mix(in srgb, var(--success) 40%, var(--border));
+  background: color-mix(in srgb, var(--success) 12%, var(--surface2));
+}
+
+.pfErr {
+  border-color: color-mix(in srgb, var(--danger) 40%, var(--border));
+  background: color-mix(in srgb, var(--danger) 12%, var(--surface2));
+}
+
+.pfForm {
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+  max-width: 560px;
+}
+
+.pfField label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.pfField input,
+.pfField select {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  padding: 10px 12px;
+  color: var(--text);
+  outline: none;
+}
+
+.pfField input:focus,
+.pfField select:focus {
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.pfField input:disabled {
+  opacity: 0.75;
+}
+
+.pfActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.pfBtn,
+.pfBtnGhost {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 900;
+}
+
+.pfBtn {
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
+  background: color-mix(in srgb, var(--accent) 18%, var(--surface2));
+  color: var(--text);
+  cursor: pointer;
+}
+
+.pfBtnGhost {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+

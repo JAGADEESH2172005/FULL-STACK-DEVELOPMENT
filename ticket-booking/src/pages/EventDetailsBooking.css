@@ -1,0 +1,114 @@
+.appShell {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 22px 18px 26px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.brandMark {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: radial-gradient(
+      circle at 30% 30%,
+      color-mix(in srgb, var(--accent) 45%, transparent),
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      var(--surface2),
+      color-mix(in srgb, var(--accent) 14%, var(--surface2))
+    );
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--border));
+}
+
+.brandTitle {
+  margin: 0;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.brandSub {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.topbarRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topLink {
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.topLink:hover {
+  background: var(--surface2);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .topbarRight {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.stack {
+  display: grid;
+  gap: 16px;
+}
+
+.evDescTitle {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.evDesc {
+  margin: 0;
+  color: var(--muted);
+}
+

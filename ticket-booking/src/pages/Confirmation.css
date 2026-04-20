@@ -1,0 +1,242 @@
+.cfWrap {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 22px 18px 26px;
+}
+
+.cfTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.cfEyebrow {
+  margin: 0 0 6px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cfH1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.cfSub {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.cfBack {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 900;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+}
+
+.cfGrid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.cfTicket {
+  position: relative;
+  border-radius: 18px;
+  transform-style: preserve-3d;
+  perspective: 1300px;
+}
+
+.cfTicketGlow {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(
+    circle at 20% 15%,
+    color-mix(in srgb, var(--accent) 26%, transparent),
+    transparent 55%
+  );
+  filter: blur(10px);
+  opacity: 0.8;
+  transform: translateZ(-20px);
+}
+
+.cfTicketInner {
+  position: relative;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border));
+  box-shadow: 0 34px 90px -70px rgba(0, 0, 0, 0.65), var(--shadow);
+  overflow: hidden;
+  padding: 16px;
+  transform: rotateX(6deg) rotateY(-10deg);
+}
+
+.cfTicketInner::before {
+  content: '';
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(
+    circle at 30% 20%,
+    color-mix(in srgb, var(--accent) 20%, transparent),
+    transparent 60%
+  );
+  opacity: 0.8;
+}
+
+.cfTicketInner > * {
+  position: relative;
+  transform: translateZ(10px);
+}
+
+.cfTicketTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cfLabel {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.cfValue {
+  margin: 6px 0 0;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.cfBadge {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  font-weight: 900;
+}
+
+.cfDivider {
+  height: 1px;
+  background: var(--border);
+  margin: 14px 0;
+}
+
+.cfRows {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.cfRow {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface2);
+}
+
+.cfTicketBottom {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+}
+
+.cfIdLabel {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.cfId {
+  margin: 6px 0 0;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  word-break: break-all;
+}
+
+.cfActions {
+  display: grid;
+  gap: 16px;
+}
+
+.cfActionCard {
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.cfH2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+
+.cfList {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.cfButtons {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.cfBtn,
+.cfBtnGhost {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 900;
+}
+
+.cfBtn {
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
+  background: color-mix(in srgb, var(--accent) 18%, var(--surface2));
+  color: var(--text);
+}
+
+.cfBtnGhost {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+@media (max-width: 980px) {
+  .cfGrid {
+    grid-template-columns: 1fr;
+  }
+  .cfTicketInner {
+    transform: none;
+  }
+  .cfRows {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cfTicketInner {
+    transform: none;
+  }
+}
+

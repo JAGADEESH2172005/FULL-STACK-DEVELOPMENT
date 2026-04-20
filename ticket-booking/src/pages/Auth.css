@@ -1,0 +1,105 @@
+.authWrap {
+  width: min(520px, 100%);
+  margin: 0 auto;
+  padding: 22px 18px 26px;
+}
+
+.authCard {
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.authTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.authH1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.authP {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.authForm {
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.authField label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+.authField input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  padding: 10px 12px;
+  color: var(--text);
+  outline: none;
+}
+
+.authField input:focus {
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.authErr {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--danger);
+}
+
+.authBanner {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--danger) 40%, var(--border));
+  background: color-mix(in srgb, var(--danger) 12%, var(--surface2));
+  font-size: 13px;
+  margin: 10px 0 0;
+}
+
+.authActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.authBtn {
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--border));
+  padding: 10px 12px;
+  font-weight: 750;
+  color: var(--text);
+  background: color-mix(in srgb, var(--accent) 18%, var(--surface2));
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.authLink {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.authLink:hover {
+  text-decoration: underline;
+}
+
